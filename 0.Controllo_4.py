@@ -15,7 +15,7 @@ fit = xr.polyval(ds['time'], p.polyfit_coefficients)
 sst_detr= ds - fit
 
 
-# Oppure, usando la funzione:
+# Oppure:
 def detrend_dim(da, dim, deg=1):
     p = da.polyfit(dim=dim, deg=deg)
     fit = xr.polyval(da[dim], p.polyfit_coefficients)
